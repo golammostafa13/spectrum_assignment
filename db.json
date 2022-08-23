@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Golam Mostafa",
+      "email": "mostafarmstu@gmail.com",
+      "address": "Tabalchari, Rangamati",
+      "mobile": "01516715333"
+    },
+    {
+      "id": 2,
+      "name": "Sakib Al Hasan",
+      "email": "sakib@gmail.com",
+      "address": "Dhaka, Bangladesh",
+      "mobile": "015XX-XXXXXX"
+    },
+    {
+      "id": 3,
+      "name": "Farhad Bhuiyan",
+      "email": "farhad@gmail.com",
+      "address": "Dhaka, Bangladesh",
+      "mobile": "016XX-XXXXXX"
+    }
+  ],
+  "signupUsers": [
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
