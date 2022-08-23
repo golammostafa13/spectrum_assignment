@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { UserModel } from './user-dashboard.model';
-import { ApiService } from '../shared/api.service';
+import { ApiService } from '../api/api.service';
 
 @Component({
   selector: 'app-user-dashboard',
