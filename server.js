@@ -24,7 +24,7 @@ const middlewares = jsonServer.defaults({
   static: './dist/assignment',
 });
 
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile('./dist/assignment/index.html');
 });
 
