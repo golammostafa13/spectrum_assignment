@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: "https://git.heroku.com/spectrum-assignment.git"
+  apiUrl: "https://spectrum-assignment.herokuapp.com"
 };
