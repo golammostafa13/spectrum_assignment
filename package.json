@@ -4,13 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "dev:ssr": "ng run Assignment:serve-ssr",
-    "serve:ssr": "node dist/Assignment/server/main.js",
-    "build:ssr": "ng build && ng run Assignment:server",
-    "prerender": "ng run Assignment:prerender"
+    "json:server": "json-server --watch db.json",
+    "app": "ng s --live-reload false",
+    "start:app:server": "concurrently --kill-others \"npm run json:server\" \"npm run app\"",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +27,7 @@
     "@nguniversal/express-engine": "^14.1.0",
     "cors": "^2.8.5",
     "express": "^4.15.2",
+    "json-server": "^0.17.0",
     "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

@@ -4,8 +4,6 @@ import { FormGroup, FormBuilder, FormControl, Validators, } from '@angular/forms
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
-const API_URL = "http://localhost:3000";
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -13,6 +11,7 @@ const API_URL = "http://localhost:3000";
 })
 
 export class SignupComponent implements OnInit {
+  private readonly API_URL = environment.API;
 
   signupForm !: FormGroup;
   imgUrl : string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLvPJKXmD3mIlfOVee-apUyIhjnkCDFLtLGpxUA5-8hA&s";
@@ -39,7 +38,7 @@ export class SignupComponent implements OnInit {
     });
   }
   signupHandler(){
-    this.http.post<any>(`${API_URL}/signupUsers`, this.signupForm.value)
+    this.http.post<any>(`${this.API_URL}/signupUsers`, this.signupForm.value)
     .subscribe(res => {
       console.log(res);
       this.signupForm.reset();
