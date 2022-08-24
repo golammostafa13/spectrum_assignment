@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, FormControl, Validators, } from '@angular/forms
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
-const API_URL = environment.apiUrl;
+const API_URL = "http://localhost:3000";
 
 @Component({
   selector: 'app-signup',

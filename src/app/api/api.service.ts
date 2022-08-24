@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment.prod';
 
-const API_URL = environment.apiUrl;
+const API_URL = "http://localhost:3000";
 
 @Injectable({
   providedIn: 'root'

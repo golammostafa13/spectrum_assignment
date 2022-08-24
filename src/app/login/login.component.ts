@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
+// import { environment } from 'src/environments/environment.prod';
 
-const API_URL = environment.apiUrl;
+// const API_URL = environment.apiUrl;
 
 @Component({
   selector: 'app-login',
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     })
   }
   loginHandler(){
-    this.http.get<any>(`${API_URL}/signupUsers`)
+    this.http.get<any>(`http://localhost:3000/signupUsers`)
     .subscribe(res => {
       const user = res.find((u:any) => {
         return u.email === this.loginForm.value.email && u.password === this.loginForm.value.password
