@@ -4,15 +4,15 @@ const path = require('path');
 
 const app = express();
 
-const distDir = __dirname + '/dist/'
+const distDir = __dirname + '/dist'
 
 app.use(express.static(distDir));
 // app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
-//     res.setHeader(
-//         "Access-Control-Allow-Headers",
-//         "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-//     );
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
     res.setHeader(
         "Access-Control-Allow-Methods",
         "GET, POST, PATCH, PUT, DELETE, OPTIONS"
