@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API: 'https://spectrum-assignment.herokuapp.com'
+  API: 'http://localhost:3000'
 };

@@ -5,7 +5,7 @@ const app = express();
 
 const PORT = process.env.PORT || 8000;
 
-app.use('/api', jsonServer.router('db.json'));
+app.use('http://localhost:3000', jsonServer.router('db.json'));
 app.use(express.static(__dirname+'/dist/assignment'));
 
 app.get('/*', (req, res) => {

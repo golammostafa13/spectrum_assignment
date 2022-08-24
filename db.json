@@ -1,13 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "Golam Mostaf",
-      "email": "mostafarmstu@gmail.com",
-      "address": "Tabalchari, Rangamati",
-      "mobile": "01516715333"
-    },
-    {
       "id": 3,
       "name": "Farhad Bhuiyan",
       "email": "farhad@gmail.com",
@@ -21,6 +14,14 @@
       "address": "Noakhali, Bangladesh",
       "mobile": "01824-XXXXXX",
       "image": null
+    },
+    {
+      "id": 5,
+      "name": "Shariful Islam",
+      "email": "sharif@gmail.com",
+      "address": "Tangail, Bangladesh",
+      "mobile": "018XX-XXXXXX",
+      "image": null
     }
   ],
   "signupUsers": [
@@ -30,6 +31,13 @@
       "password": "1234567",
       "mobile": "11111111111",
       "id": 1
+    },
+    {
+      "name": "mostafa",
+      "email": "mostafarmstu@gmail.com",
+      "password": "123456",
+      "mobile": "01516715333",
+      "id": 2
     }
   ],
   "comments": [],
