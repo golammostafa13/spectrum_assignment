@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 
-const distDir = __dirname + '/dist'
+const distDir = __dirname + '/dist/'
 
 app.use(express.static(distDir));
 app.use((req, res, next) => {

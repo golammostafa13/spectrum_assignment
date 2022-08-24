@@ -25,13 +25,13 @@ export class ApiService {
     }))
   }
   updateUser(data : any, id: number){
-    return this.http.put<any>(`${API_URL}/posts/${id}`, data)
+    return this.http.put<any>(`${API_URL}/posts/`+id, data)
     .pipe(map((res:any) => {
       return res;
     }))
   }
   deleteUser(id : number){
-    return this.http.delete<any>(`${API_URL}/posts/${id}`)
+    return this.http.delete<any>(`${API_URL}/posts/`+id)
     .pipe(map((res:any) => {
       return res;
     }))
