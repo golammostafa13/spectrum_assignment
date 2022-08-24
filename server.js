@@ -24,6 +24,10 @@ const middlewares = jsonServer.defaults({
   static: './dist/assignment',
 });
 
+app.get('/*', (req, res) => {
+    res.sendFile('./dist/assignment/index.html');
+});
+
 const PORT = process.env.PORT || 8000;
 server.use(middlewares);
 
