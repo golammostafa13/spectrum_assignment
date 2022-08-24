@@ -2,12 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators, } from '@angular/forms';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+
+const API_URL = environment.apiUrl;
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+
 export class SignupComponent implements OnInit {
 
   signupForm !: FormGroup;
@@ -35,7 +39,7 @@ export class SignupComponent implements OnInit {
     });
   }
   signupHandler(){
-    this.http.post<any>("http://localhost:3000/signupUsers", this.signupForm.value)
+    this.http.post<any>(`${API_URL}/signupUsers`, this.signupForm.value)
     .subscribe(res => {
       console.log(res);
       this.signupForm.reset();

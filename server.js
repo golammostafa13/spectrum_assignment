@@ -4,10 +4,24 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/assignment'));
+const distDir = __dirname + '/src/';
+
+app.use(express.static(distDir));
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+    );
+    next();
+});
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/assignment/'}),
+    res.sendFile('index.html', {root: 'src'}),
 );
 
 // Start the app by listening on the default Heroku port
