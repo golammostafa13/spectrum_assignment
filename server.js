@@ -7,7 +7,7 @@ const app = express();
 const distDir = __dirname + '/dist'
 
 app.use(express.static(distDir));
-// app.use((req, res, next) => {
+app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader(
         "Access-Control-Allow-Headers",
@@ -18,7 +18,7 @@ app.use(express.static(distDir));
         "GET, POST, PATCH, PUT, DELETE, OPTIONS"
     );
     next();
-// });
+});
 
 app.get('/*', (req, res) =>
     res.sendFile(path.join(__dirname + '/dist/index.html'))
